@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    /* background-color: rgb(255, 255, 237); */
+}
+
+body{
+    background-image: url('../Image/PLANO\ DE\ FUNDO.jpg');
+}
+
+.imgIndex{
+    /* width: 100px;
+    height: 80px; */
+  height: 40vh;      /* controla o corte */
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.imgIndex img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  object-position: center; 
+  display: block;
+}
+
+.texto{
+
+}
+
+.titleContainer{
+    /* títulos dos containers */
+}
+
+.titleLista{
+    text-align: center;
+}
+
+
+
+.containerAbout{
+    height: 80px;
+    padding: 10px 100px 10px 100px;
+    /* 1-top; 2-right; 3-bottom; 4-left */
+    margin: 30px;
+    text-align: center;
+
+}
+
+hr{
+    width: 80%;
+    margin: 20px auto;
+}
+
+
+a{
+    color: black;         
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(255, 126, 126);
+}
+
+.lista{
+    padding: 10px 10px 10px 300px;
+    display: flex;
+    gap: 50px; 
+}
+
+.lista img{
+    width: 600px;
+    position: static;
+    left: 0px;  
+    top: 0px;
+}
+
+.container{
+    /* border: darksalmon;  */
+    border-top: 0px;
+    border-left: 3px darksalmon;
+    border-bottom: 3px darksalmon;
+    border-right: 0px ;
+    border-style: dashed;
+    display: flex; 
+    /*justify-content: space-between; /*deixa um à esquerda, um no meio e um à direita */
+    text-align: center;
+    margin: 20px;
+}
+
+.b1, .b2, .b3{
+    width: 33%;  
+    padding: 20px;
+
+}
+
+iframe{
+    padding: 10px 100px 10px 100px;
+    display: block;  
+    margin: 0 auto;  
+    /* width: 200px; */
+
+}
+
+/* img{
+
+    width: 600px; 
+    padding: 10px 100px 10px 100px;
+    margin: 30px;
+    position: relative;
+    left: 500px;  
+    top: 20px;
+} */
