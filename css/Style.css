@@ -50,15 +50,13 @@ body{
     height: 100px;
     margin: 20px auto;
     background-color: bisque;
-    transition: width 1s, 
-        height 1s,
+    padding: 2%;
+    transition:
         background-color 1s,
         margin-left 1s;
 }
 
 .blocoTexto:hover{
-    width: 300px;
-    height: 300px;
     background-color: brown;
     margin-left: 10%;
 }
@@ -66,16 +64,8 @@ body{
 .titleLista{
     text-align: center;
     color: rgb(0, 0, 0);
-
-    transition: 
-        color 1s,
-        margin-left 1s;
 }
 
-.titleLista:hover{
-    color: rgb(194, 163, 146);
-    margin-left: 100px;
-}
 
 
 .containerAbout{
@@ -84,6 +74,18 @@ body{
     /* 1-top; 2-right; 3-bottom; 4-left */
     margin: 30px;
     text-align: center;
+}
+
+/* Modifica o bloco todo */
+.container{
+    border: darksalmon; 
+    box-shadow: 0px 0px 10px 1px darksalmon;
+    display: flex; 
+    /* justify-content: space-between; /*deixa um à esquerda, um no meio e um à direita */
+    text-align: center;
+    margin: 10px 100px 10px 100px;    
+    border-style: dashed;
+
 }
 
 hr{
@@ -100,27 +102,29 @@ a:hover{
 }
 
 .lista{
-    padding: 30px 10px 10px 300px;
+    padding: 30px 10% 10px 10%;
     display: flex;
     gap: 50px; 
 }
 .lista img{
     width: 600px;
     position: static;
-    left: 0px;  
-    top: 0px;
+    animation-name: img;
+    animation-duration: 1s;
 }
 
-/* Modifica o bloco todo */
-.container{
-    border: darksalmon; 
-    box-shadow: 0px 0px 10px 1px darksalmon;
-    display: flex; 
-    /* justify-content: space-between; /*deixa um à esquerda, um no meio e um à direita */
-    text-align: center;
-    margin: 20px;    
-    border-style: dashed;
+@keyframes img{
+    from {
+        opacity: 0;
+        transform: translateY(5px); /* começa deslocada */
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0); /* posição final */
+      }
 }
+
+
 
 /* Modifica cada bloco, ou objeto, individualmente */
 .b1, .b2, .b3{
@@ -131,10 +135,10 @@ a:hover{
 }
 
 iframe{
-    padding: 10px 100px 10px 100px;
+    padding: 10px 20% 10px 10%;
     display: block;  
     margin: 0 auto;  
-    /* width: 200px; */
+    width: 50%; 
 }
 
 .rodape{
@@ -142,4 +146,48 @@ iframe{
     padding: 10px 10px 40px 10px;
 }
 
+/*ADAPTA A SMARTPHONE*/
+@media screen and (max-width: 400px) {
+    body{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
 
+    .containerAbout{
+        height: 80%;
+        padding: 10px 10% 10px 10%;
+        /* 1-top; 2-right; 3-bottom; 4-left */
+        margin: 0px;
+        text-align: center;
+    }
+
+    .container{
+        margin: 10px 10% 10px 10%;
+        padding: 10px 10% 10px 10%;
+        flex-direction: column;
+        display: flex;
+        
+    }
+
+    .lista{
+        padding: 10px 10% 10px 10%;
+        display: flex;
+        gap: 50px; 
+        flex-direction: column; /*deixa um item a baixo um do outro*/
+    }
+    .lista img{
+        width: 100%;
+        position: static;
+
+    }
+
+    iframe{
+    padding: 10px;
+    display: block;  
+    margin: 0 auto;  
+    width: 50%; 
+}
+}
